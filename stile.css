@@ -1,0 +1,79 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* The inherit keyword specifies that a property should inherit its value from its parent element.*/
+}
+ /* setting the style for the whole calculator*/
+.calculator {
+  box-sizing: border-box; /*allows us to include the padding and border in an element's total width and height*/
+  border: 6px solid #ccc;
+  border-radius: 5px;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background-color: rgb(253, 253, 253);
+}
+/* setting the style for the screen */
+.calculator-screen {
+  width: 100%;
+  font-size: 3em; /* em is relative to the font size of its direct or nearest parent */
+  height: 95px;
+  border: none;
+  background-color: #252525;
+  color: #e9e8e8;
+  text-align: right;
+  padding-right: 15px;
+  padding-left: 10px;
+}
+
+button {
+  height: 50px;
+  background-color: #fff;
+  border-radius: 3px; 
+  background-color: transparent;
+  font-size: 2rem; /* rem is relative to the html (root) font-size. */
+  color: #333;
+  background-image: linear-gradient(to bottom rgba(23, 143, 137, 0.04));
+}
+
+button:hover {
+  background-color: #f0eeee;
+}
+
+.operator {
+  color: #1f44e9;
+}
+
+.all-clear {
+  background-color: #db1616;
+  border-color: #ce1212;
+  color: #e9e8e8;
+  font-size: 1.5rem;
+}
+
+.all-clear:hover {
+  background-color: #f17377;
+}
+
+.equal-sign {
+  background-color: #3e5ce2;
+  border-color: #1f44e9;
+  color: #e9e8e8;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5; /* grid item's size and location in a grid layout*/
+}
+
+.equal-sign:hover {
+  background-color: #66a5ec;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+
